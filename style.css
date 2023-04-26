@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+@font-face {
+  font-family: "maFont";
+  src: url(./assets/InstrumentSerif-Regular.ttf);
+}
+
+body {
+  font-family: "maFont", sans-serif;
+  background: url(./Soleil.jpg) center/cover no-repeat;
+  min-height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  /* les tailles de polices doivent etre en rem */
+  font-size: 2.5rem;
+  text-shadow: 10px -7px 3px #1d2704b8;
+  color: tomato;
+  text-decoration: underline;
+  /* font-family: "Oswald", sans-serif; */
+  /* font-family: "maFont", sans-serif; */
+}
+
+body {
+  background-color: rgb(140, 140, 117);
+}

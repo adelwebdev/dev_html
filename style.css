@@ -5,6 +5,11 @@
   src: url(./assets/InstrumentSerif-Regular.ttf);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "maFont", sans-serif;
   background: url(./Soleil.jpg) center/cover no-repeat;
@@ -26,4 +31,15 @@ h1 {
 
 body {
   background-color: rgb(140, 140, 117);
+}
+
+main {
+  height: 500px;
+  background: #415e6f5e;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #823ec157;
+  border-radius: 10px;
+  box-shadow: 3px -1px 14px 2px #8b9d715c;
+  padding: 15px;
 }

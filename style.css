@@ -8,12 +8,13 @@
 * {
   margin: 0;
   padding: 0;
+  /* border: 2px solid red; */
 }
 
 body {
   font-family: "maFont", sans-serif;
   background: url(./Soleil.jpg) center/cover no-repeat;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1 {
   letter-spacing: 3px;
   text-align: center;
   /* les tailles de polices doivent etre en rem */
-  font-size: 2.5rem;
+  font-size: 6vw;
   text-shadow: 10px -7px 3px #1d2704b8;
   color: tomato;
   text-decoration: underline;
@@ -34,7 +35,7 @@ body {
 }
 
 main {
-  height: 500px;
+  min-height: 500px;
   background: #415e6f5e;
   width: 90%;
   margin: 0 auto;
@@ -42,4 +43,131 @@ main {
   border-radius: 10px;
   box-shadow: 3px -1px 14px 2px #8b9d715c;
   padding: 15px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.flexbox,
+.grid,
+.absolute {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.flexbox ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexbox li {
+  list-style: none;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  background: violet;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.grid img {
+  height: 150px;
+  width: 80%;
+  margin-top: 20px;
+  display: block;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input,
+textarea {
+  margin: 5px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: maFont;
+}
+
+textarea {
+  grid-area: ta;
+  resize: none;
+  height: 40px;
+}
+
+#btn-submit {
+  grid-template-areas: bt;
+  cursor: pointer;
+  background: cyan;
+  transition: 0.5s;
+}
+
+#btn-submit:hover {
+  background: darkblue;
+}
+
+.absolute {
+  position: relative;
+  height: 150px;
+}
+
+#circle1 {
+  height: 60px;
+  width: 60px;
+  background: skyblue;
+  position: absolute;
+  border-radius: 80px;
+  top: 0;
+  right: 0px;
+}
+
+#circle2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 150px;
+  background: teal;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+
+@media screen and (max-width: 620px) {
+  .grid-container img {
+    width: 55%;
+  }
+
+  .flexbox ul {
+    flex-direction: column;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+
+  input,
+  textarea {
+    font-size: 0.8rem;
+  }
 }

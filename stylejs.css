@@ -31,3 +31,7 @@ img {
 .hide {
   visibility: hidden;
 }
+
+.mouseMove {
+  border: 2px solid rgba(132, 147, 137, 0.851);
+}

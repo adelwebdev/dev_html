@@ -44,8 +44,40 @@ mouseM.addEventListener("mousemove", (e) => {
     }
 })
 
+var votreMsg = document.querySelector(".result")
+
 myInput.addEventListener("input", (e) => {
     console.log("input")
     horizontal.innerHTML = e.target.value
+    votreMsg.innerHTML = e.target.value    
 })
+
+const themeContainer = document.querySelectorAll(".class")
+const dark = document.getElementById("dark")
+const orange = document.getElementById("orange")
+const salmon = document.getElementById("salmon")
+
+console.log(themeContainer)
+
+themeContainer.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        console.log(e.target.id)
+        document.body.classList.remove("darkTheme", "orangeTheme", "salmonTheme")
+
+        switch(e.target.id){
+            case "dark": 
+            document.body.classList.add("darkTheme");
+            break;
+            case "orange": 
+            document.body.classList.add("orangeTheme");
+            break;
+            case "salmon": 
+            document.body.classList.add("salmonTheme");
+            break;
+            null;
+        }
+    })
+})
+
+
 

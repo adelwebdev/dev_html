@@ -1,5 +1,5 @@
 body {
-  background: teal;
+  background: rgb(80, 177, 177);
 }
 
 h1 {
@@ -34,4 +34,42 @@ img {
 
 .mouseMove {
   border: 2px solid rgba(132, 147, 137, 0.851);
+}
+
+#monBtn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aqua;
+}
+
+.themeContainer {
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
+}
+
+.class {
+  border: 2px rgb(36, 240, 21);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+#dark {
+  background: rgb(11, 1, 31);
+}
+#orange {
+  background: orangered;
+}
+#salmon {
+  background: salmon;
+}
+
+.darkTheme {
+  background: rgb(11, 1, 31);
+}
+.orangeTheme {
+  background: orangered;
+}
+.salmonTheme {
+  background: salmon;
 }

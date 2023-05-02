@@ -79,5 +79,12 @@ themeContainer.forEach((item) => {
     })
 })
 
+const array1 = ['paris', 'alger', 22, true];
+for (i=0; i < array1.length; i++){
+    console.log(array1.length)
+    console.log(array1[i])
+    console.log(typeof(array1[i]))
+}
+
 
 

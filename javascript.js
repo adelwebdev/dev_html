@@ -86,5 +86,58 @@ for (i=0; i < array1.length; i++){
     console.log(typeof(array1[i]))
 }
 
+const inputVid = document.getElementById("inputVid")
+const videoChange = document.getElementById("video")
+let link = "";
+
+inputVid.addEventListener("input", (e) => {
+    console.log(e.target.value);
+    changeLink(e.target.value)
+
+    if (link) {
+        video.innerHTML = `
+        <iframe
+          width="763"
+          height="429" src=${link}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>`;
+      }
+    });
+
+    const changeLink = (linkToChange) => {
+        let embed = linkToChange.replace("watch?tv=", "embed/");
+  link = embed.split("&")[0];
+  console.log(link);
+    }
+
+
+
+const quote = document.getElementById("quote");
+// console.log(quote)
+const getQuote = () => {
+    fetch("https://api.quotable.io/random").then((res) => res.json())
+    .then((data) => {
+        quote.innerHTML = data.content;
+    })
+}
+
+fetch("https://picsum.photos/1600/1000").then((res) => {
+    document.getElementById("pic").innerHTML =`<img src=${res.url}>` 
+})
+
+quote.addEventListener("click", () => {
+    getQuote();
+})
+getQuote();
+
+
+
+
+
+
+
 
 
